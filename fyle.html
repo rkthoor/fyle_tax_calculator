@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="fyle.css">
+</head>
+<body>
+    <h1>Income Tax Calculator</h1>
+    <form id="incomeForm">
+        <div class="input-container">
+            <label for="grossIncome">Enter gross annual income <span class="tooltip-trigger" data-tooltip="Enter your gross income.">?</span></label>
+            <input type="text" id="grossIncome" name="grossIncome" class="input-field" placeholder="Enter gross annual income">
+            
+        </div>
+        <div class="input-container">
+            <label for="extraIncome">Enter extra income <span class="tooltip-trigger" data-tooltip="Enter any additional income, if applicable.">?</span></label>
+            <input type="text" id="extraIncome" name="extraIncome" class="input-field" placeholder="Enter extra income from other sources" >
+            
+        </div>
+        <div class="input-container">
+            <label for="ageGroup">Enter age Group <span class="tooltip-trigger" data-tooltip="Enter your age group.">?</span></label>
+            <select id="ageGroup" name="ageGroup" required>
+                <option value="under40">Under 40</option>
+                <option value="40to60">40 to 60</option>
+                <option value="over60">Over 60</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <label for="deductions">Enter total applicable deductions <span class="tooltip-trigger" data-tooltip="Enter deductions, if any.">?</span></label>
+            <input type="text" id="deductions" name="deductions" class="input-field" placeholder="Add total applicable deductions">
+        </div>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    <div id="result"></div>
+
+    <script src="fyle.js"></script>
+</body>
+</html>
